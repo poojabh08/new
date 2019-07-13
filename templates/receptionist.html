@@ -1,0 +1,12 @@
+{% block content %}
+
+
+ <div class="container">
+        <h1 align="center">Emergency alert</h1>
+        {% if result %} 
+                        {% for r in result %}
+                          <h2>{{r.Name}} is in need of Ambulance at <a href={{r.Address}}>Address</a></h2>
+                          {% endfor %}
+    </div>
+    {% endif %}
+    {% endblock %} 

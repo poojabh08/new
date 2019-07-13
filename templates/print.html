@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form  method="post">
+        
+    {% csrf_token %}
+    {% if form %}
+        <h1>Token History</h1>
+        {% for i in form %}
+            Name:{{ i.name }}
+            <br>
+        Doctor:{{ i.Doctor }}
+        <br>
+        Date:{{ i.Date }}
+        <br>
+        Token number:{{ i.identity }}
+        <br><br><br><br><br><br>
+        {% endfor %}
+        {% endif %}
+        {% if bo %}
+
+
+
+        <h1>Report History</h1>
+        {% for i in bo %}
+        {% if value %}
+        <p>Patient Name:{{i.patient.patient_name}}</p>
+        <p>Date:{{i.Date}}</p>
+        <p>Sex:{{i.patient.Sex}}</p>
+        <p>Age:{{i.patient.Age}}</p>
+        <p>Address:{{i.patient.Address}}</p>
+        <p>Contact:{{i.patient.Contact}}</p>
+        <p>Glood Group:{{i.patient.Blood_group}}</p>
+        <p>Email:{{i.patient.Email}}</p>
+        {% endif %}
+    <p>Date:{{i.Date}}</p>
+    <p>hemoglobin:{{i.Hemoglobin}}</p>
+     <p>neutrophils:{{i.Neutrophils}}</p>
+     <p>lymphocytes:{{i.lymphocytes}}</p>
+     <p>monocytes:{{i.monocytes}}</p>
+     <p>basophils:{{i.basophils}}</p>
+     <p>eosinophils:{{i.eosinophils}}</p>
+     <p>rbc:{{i.rbc}}</p>
+     <p>platelets:{{i.platelets}}</p>
+     <br><br><br><br><br><br>
+        {% endfor %}
+        {% endif %}
+        {% if bi %}
+
+
+
+        <h1>Bill History</h1>
+        {% for i in bi %}
+        {% if value %}
+        <p>Patient Name:{{i.patient.patient_name}}</p>
+        <p>Date:{{i.Date}}</p>
+        <p>Sex:{{i.patient.Sex}}</p>
+        <p>Age:{{i.patient.Age}}</p>
+        <p>Address:{{i.patient.Address}}</p>
+        <p>Contact:{{i.patient.Contact}}</p>
+        <p>Glood Group:{{i.patient.Blood_group}}</p>
+        <p>Email:{{i.patient.Email}}</p>
+        {% endif %}
+        <p>report charges:{{i.report}}</p>
+        <p>consultation fee:{{i.fee}}</p>
+        <p>operation charges:{{i.operation}}</p>
+        <p>total:{{i.tot}}</p>
+        <br><br><br><br><br><br>
+        {% endfor %}
+        {% endif %}
+
+        {% if value %}
+        {% else %}
+        <button><a href={{temp}}>Token</a></button>
+        {% endif %}
+    </form>
+</body>
+</html>

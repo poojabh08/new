@@ -1,0 +1,38 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form  method="post">
+        <button><a href="/allReport/">Report</a></button>
+        <button><a href="/allToken/">Tokens</a></button>
+        <button><a href="/allBill/">Bill</a></button>
+        <button><a href="/Search/">Search</a></button>
+        <br>
+        <br>
+        {% if result %}
+        <div class="container">
+        <h1 align="center">Emergency alert</h1>
+        {% if result %} 
+                        {% for r in result %}
+                          <h2>{{r.Name}} is in need of Ambulance at <a href={{r.Address}}>Address</a></h2>
+                          {% endfor %}
+        </div>
+        {% endif %}
+        {% endif %}</div>
+        {% csrf_token %}
+        {% if value %}
+        Name:{{form.recp_name}}
+        <br>
+        Contact:{{form.Contact}}
+        <br>
+        Email ID:{{form.Email}}
+        {% endif %}
+        <br>
+    </form>
+</body>
+</html>

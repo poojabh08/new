@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Report</h1>
+    {% for i in form %}
+    <div
+   <p>patient name:{{i.patient.patient_name}}</p>
+   <p>Date:{{i.Date}}</p>
+   <p>Sex:{{i.patient.Sex}}</p>
+   <p>age:{{i.patient.Age}}</p>
+   <p>address:{{i.patient.Address}}</p>
+   <p>contact:{{i.patient.Contact}}</p>
+   <p>blood group:{{i.patient.Blood_group}}</p>
+   <p>email:{{i.patient.Email}}</p>
+   <p>hemoglobin:{{i.Hemoglobin}}</p>
+<p>neutrophils:{{i.Neutrophils}}</p>
+<p>lymphocytes:{{i.lymphocytes}}</p>
+<p>monocytes:{{i.monocytes}}</p>
+<p>basophils:{{i.basophils}}</p>
+<p>eosinophils:{{i.eosinophils}}</p>
+<p>rbc:{{i.rbc}}</p>
+<p>platelets:{{i.platelets}}</p>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form  method="post">
+        <button><a href={{temp}}>Token</a></button>
+        <button><a href={{temph}}>History</a></button>
+        <br>
+        <br>
+        {% csrf_token %}
+        Name:{{form.recp_name}}
+        <br>
+        DOB:{{form.Dob}}
+        <br>
+        Age:{{form.Age}}
+        <br>
+        Contact:{{form.Contact}}
+        <br>
+        Email ID:{{form.Email}}
+        <br>
+        Address:{{form.Address}}
+
+    </form>
+</body>
+</html>

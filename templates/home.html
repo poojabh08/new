@@ -1,0 +1,27 @@
+{% extends 'base/layout.html' %}
+{% load static %}
+{{msg}}
+
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+        <div class="alert {% if message.tags %} alert-{{message.tags}} 
+        {% endif %}" role="alert">{{message}}</div>
+{% endfor %}
+{% endif %}
+<div class="container">
+        <form action="" method="POST" class ="mt-4">
+                {% csrf_token %}
+                {% if form %} 
+                {{form.as_p}}
+                {% endif %}
+                
+                <input type="submit" value="Search" class="btn btn-info">
+        </form>
+</div>
+{% if result %}
+{% endif %}
+
+{% endblock %}
+
+
